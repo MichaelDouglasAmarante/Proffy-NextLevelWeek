@@ -2,7 +2,7 @@ import React, { TextareaHTMLAttributes } from 'react';
 
 import './styles.css';
 
-interface TextareaProps extends TextareaHTMLAttributes<HTMLElement>{
+interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement>{
     label: string;
     name: string;
 }
