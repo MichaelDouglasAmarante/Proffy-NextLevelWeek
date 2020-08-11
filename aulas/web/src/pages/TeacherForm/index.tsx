@@ -89,7 +89,8 @@ function TeacherForm(){
                         name="name" 
                         label="Nome Completo" 
                         value={name} 
-                        onChange={(e) => { setName(e.target.value) }}
+                        onChange={(e) => { setName(e.target.value) 
+                        }}
                      />
 
                     <Input 
@@ -151,14 +152,14 @@ function TeacherForm(){
                         </button>
                     </legend>
 
-                    {scheduleItems.map(scheduleItem => {
+                    {scheduleItems.map((scheduleItem, index) => {
                         return (
                             <div key={scheduleItem.week_day} className="schedule-item">
                         <Select 
                             name="week_day" 
                             label="Dia da Semana"
                             value={scheduleItem.week_day}
-                            onChange={e => setScheduleItemValue(0, 'week_day', e.target.value)}
+                            onChange={e => setScheduleItemValue(index, 'week_day', e.target.value)}
                             options={[
                                 { value: '0', label: 'Domingo' },
                                 { value: '1', label: 'Segunda-feira' },
@@ -175,17 +176,17 @@ function TeacherForm(){
                             label="Das" 
                             type="time"
                             value={scheduleItem.from}
-                            onChange={e => setScheduleItemValue(1, 'from', e.target.value)}
+                            onChange={e => setScheduleItemValue(index, 'from', e.target.value)}
                         />
                         <Input 
                             name="to" 
                             label="Até" 
                             type="time" 
                             value={scheduleItem.to}
-                            onChange={e => setScheduleItemValue(2, 'to', e.target.value)}
+                            onChange={e => setScheduleItemValue(index, 'to', e.target.value)}
                         />
                     </div>
-                        )
+                        );
                     })}
                 </fieldset>
 

@@ -12,11 +12,12 @@
     width: 100%;
     max-width: 74rem;
     border-radius: 0.8rem;
-    margin: -3.2re, auto 3.2rem;
+    margin: -3.2rem auto 3.2rem;
     padding-top: 6.4rem;
     overflow: hidden;
     
 }
+
 #page-teacher-form main label{
     color: var(--color-text-complement);
 }
